@@ -1,5 +1,5 @@
 node_modules
-dist
+# dist
 demo/public
 yarn.lock
 pnpm-lock.yaml
