@@ -103,7 +103,7 @@ function vitePluginCesium(
           tag: 'link',
           attrs: {
             rel: 'stylesheet',
-            href: base + normalizePath(path.join(CESIUM_BASE_URL, 'Widgets/widgets.css'))
+            href: path.posix.join(base, normalizePath(path.join(CESIUM_BASE_URL, 'Widgets/widgets.css'))),
           }
         }
       ];
@@ -111,7 +111,7 @@ function vitePluginCesium(
         tags.push({
           tag: 'script',
           attrs: {
-            src: base + normalizePath(path.join(CESIUM_BASE_URL, 'Cesium.js'))
+            src: path.posix.join(normalizePath(path.join(CESIUM_BASE_URL, 'Cesium.js')))
           }
         });
       }
